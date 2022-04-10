@@ -3,9 +3,9 @@
 // @namespace   Violentmonkey Scripts
 // @match       http*://rpilocator.com/*
 // @grant       none
-// @version     1.0
+// @version     1.0.1
 // @author      mikekscholz
-// @description Auto refreshes rpilocator.com. Use with the TabFloater browser extension and my userStyle https://raw.githubusercontent.com/mikekscholz/stylus/main/rpilocator.user.css
+// @description Auto refreshes rpilocator.com. Use with the TabFloater browser extension and my userStyle https://raw.githubusercontent.com/mikekscholz/userStyles/main/rpilocator.user.css
 // @downloadURL https://raw.githubusercontent.com/mikekscholz/userScripts/main/rpilocator-auto-refresh.user.js
 // @homepageURL https://github.com/mikekscholz/userScripts
 // @supportURL  https://github.com/mikekscholz/userScripts/issues
@@ -23,7 +23,7 @@ function startTimer(duration, display) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.textContent = minutes + ":" + seconds;
+        display.textContent = "Next Refresh: " + minutes + ":" + seconds;
 
         if (--timer < 0) {
             timer = duration;
